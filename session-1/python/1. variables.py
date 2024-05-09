@@ -87,6 +87,13 @@ _bad_name = 23
 
 # Assignment 3: Fix the bad variable name above and create three more variables with good naming practices.
 # Write your code below:
+var_1 = "This is a good variable"
+Institude = "IIUC"
+Metric_Id = 193002 
+# print(var_1)
+# print(Institude)
+# print(Metric_Id)
+
 
 
 # Section 4: Python's Dynamic Typing
