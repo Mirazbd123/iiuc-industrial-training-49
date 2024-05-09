@@ -35,21 +35,21 @@ simple_dict['country'] = 'USA'  # Adds a new key-value pair
 # print(simple_dict.items())  # Prints all key-value pairs as tuples
 
 # get()
-print(simple_dict.get('name'))  # Returns 'John'
+# print(simple_dict.get('name'))  # Returns 'John'
 
 # pop()
 removed_value = simple_dict.pop('country')  # Removes 'country' key and returns its value
-print("Removed Value:", removed_value)
-print("Dictionary after pop(): ", simple_dict)
+# print("Removed Value:", removed_value)
+# print("Dictionary after pop(): ", simple_dict)
 
 # popitem()
 last_item = simple_dict.popitem()  # Removes and returns the last inserted key-value pair
-print("Last Item:", last_item)
-print("Dictionary after popitem(): ", simple_dict)
+# print("Last Item:", last_item)
+# print("Dictionary after popitem(): ", simple_dict)
 
 # update()
 simple_dict.update({'age': 32, 'email': 'john@example.com'})  # Updates the dictionary
-print("Dictionary after update(): ", simple_dict)
+# print("Dictionary after update(): ", simple_dict)
 
 # clear()
 # simple_dict.clear()  # Empties the dictionary
@@ -57,11 +57,27 @@ print("Dictionary after update(): ", simple_dict)
 
 # copy()
 dict_copy = simple_dict.copy()  # Creates a shallow copy of the dictionary
-print("Dictionary Copy: ", dict_copy)
+# print("Dictionary Copy: ", dict_copy)
 
 # Assignment 1: Create a dictionary representing a student with keys like 'name', 'roll_number', 'grades' (a list of subjects and marks).
 # Perform various operations like adding, removing, and modifying elements.
 # Write your code below:
+student = {'Name' : "Mirazul Alam Arman" , 'Roll' : 'C193002' , 'Grades' : [['Math' , 'A+'] , ['Physice' , 'A']  , 
+                                                                            ['Chemistry' , 'F'] , ['Biology' , 'B'], ['Bangla' , 'A-']] }
+# print(student)
+
+#Adding
+student['Age'] = 20
+# print(student)
+
+#Removing
+del student['Age']
+
+# print(student)
+
+#Modifying
+student['Grades'][0][1] = 'F'
+# print(student)
 
 
 # Section 2: Integrating Dictionaries with Lists and Tuples
@@ -77,7 +93,7 @@ students = [
 
 # Sorting list of dictionaries by grade
 students_sorted_by_grade = sorted(students, key=lambda x: x['grade'], reverse=True)
-print("Students sorted by grade: ", students_sorted_by_grade)
+# print("Students sorted by grade: ", students_sorted_by_grade)
 
 # Example 3: Dictionary of Tuples
 # Using tuples as keys
