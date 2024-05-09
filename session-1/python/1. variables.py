@@ -31,6 +31,12 @@ y = "Hello, Python learners!"
 age = 22
 name = "Ibrahim bin Karim"
 
+number = 193002
+my_name = "Mirazul Alam Arman"
+# print("Number: ",number , end="; ")
+# print("Name: ",my_name)
+# print("\n")
+
 # print("Age: ", age, end="; ")
 # print("Name: ", name)
 
@@ -53,6 +59,14 @@ d = True            # bool
 # Assignment 2: Create variables of different types and use the type() function to check their types.
 # Write your code below:
 
+v1 ='adf'
+v2 = 34.34
+v3 = False
+v4 = 3443
+# print(type(v1))
+# print(type(v2))
+# print(type(v3))
+# print(type(v4))
 
 # Section 3: Variable Naming Conventions and Industry Standards
 # -------------------------------------------------------------
@@ -81,10 +95,10 @@ _bad_name = 23
 
 # Example 4: Dynamic Typing
 var = "I am a string"
-print(var)
+# print(var)
 
 var = 42
-print(var)
+# print(var)
 
 # The variable 'var' changes type from str to int, demonstrating Python's dynamic typing.
 
