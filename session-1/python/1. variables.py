@@ -33,9 +33,9 @@ name = "Ibrahim bin Karim"
 
 number = 193002
 my_name = "Mirazul Alam Arman"
-# print("Number: ",number , end="; ")
-# print("Name: ",my_name)
-# print("\n")
+print("Number: ",number , end="; ")
+print("Name: ",my_name)
+print("\n")
 
 # print("Age: ", age, end="; ")
 # print("Name: ", name)
@@ -63,10 +63,10 @@ v1 ='adf'
 v2 = 34.34
 v3 = False
 v4 = 3443
-# print(type(v1))
-# print(type(v2))
-# print(type(v3))
-# print(type(v4))
+print(type(v1))
+print(type(v2))
+print(type(v3))
+print(type(v4))
 
 # Section 3: Variable Naming Conventions and Industry Standards
 # -------------------------------------------------------------
@@ -90,9 +90,9 @@ _bad_name = 23
 var_1 = "This is a good variable"
 Institude = "IIUC"
 Metric_Id = 193002 
-# print(var_1)
-# print(Institude)
-# print(Metric_Id)
+print(var_1)
+print(Institude)
+print(Metric_Id)
 
 
 
@@ -112,6 +112,13 @@ var = 42
 # Assignment 4: Create a variable, assign it a value of one type, then reassign it to a different type and print both.
 # Write your code below:
 
+var_name = 'Miraz'
+print(var_name)
+print(type(var_name))
+
+var_name = 23
+print(var_name)
+print(type(var_name))
 
 # Congratulations on completing this part of the Python workshop!
 # Review the assignments, try to solve them, and check your understanding of variables and data types.
