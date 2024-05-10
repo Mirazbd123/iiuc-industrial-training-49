@@ -21,71 +21,71 @@ Each section includes detailed explanations, examples, and assignments.
 # For loops are ideal for iterating over sequences such as lists, tuples, or strings.
 
 # Example 1: Simple for loop over a list
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print(fruit)
+# fruits = ["apple", "banana", "cherry"]
+# for fruit in fruits:
+#     print(fruit)
 
 # While loops are used when you want to repeat something an unknown number of times, as long as a condition is true.
 # Example 2: Simple while loop
-count = 1
-while count <= 5:
-    print(count)
-    count += 1
+# count = 1
+# while count <= 5:
+#     print(count)
+#     count += 1
 
 # Section 2: Loop Control Statements
 # -----------------------------------
 # 'break' exits the loop entirely, and 'continue' skips to the next iteration of the loop.
 
 # Example 3: Using break in a for loop
-for num in range(1, 10):
-    if num == 6:
-        break
-    print(num)
+# for num in range(1, 10):
+#     if num == 6:
+#         break
+#     print(num)
 
 # Example 4: Using continue in a for loop
-for num in range(1, 10):
-    if num % 2 == 0:
-        continue
-    print(num)
+# for num in range(1, 10):
+#     if num % 2 == 0:
+#         continue
+#     print(num)
 
 # Section 3: Advanced Loop Usage
 # ------------------------------
 # Nested loops and loops with conditional logic can handle more complex scenarios.
 
 # Example 5: Nested for loops with dictionaries
-students = {
-    "Alice": {"math": 90, "science": 85},
-    "Bob": {"math": 75, "science": 92}
-}
-for student, grades in students.items():
-    print(f"{student}'s grades:")
-    for subject, grade in grades.items():
-        print(f"{subject}: {grade}")
+# students = {
+#     "Alice": {"math": 90, "science": 85},
+#     "Bob": {"math": 75, "science": 92}
+# }
+# for student, grades in students.items():
+#     print(f"{student}'s grades:")
+#     for subject, grade in grades.items():
+#         print(f"{subject}: {grade}")
 
 # Example 6: Real-world application - Inventory Management
-inventory = {
-    "apples": 50,
-    "bananas": 20,
-    "oranges": 75
-}
-min_threshold = 30
-discount_threshold = 60
-discount_rate = 0.1
+# inventory = {
+#     "apples": 50,
+#     "bananas": 20,
+#     "oranges": 75
+# }
+# min_threshold = 30
+# discount_threshold = 60
+# discount_rate = 0.1
 
-for item, quantity in inventory.items():
-    if quantity < min_threshold:
-        print(f"Reorder {item}.")
-    elif quantity > discount_threshold:
-        print(f"Apply a {discount_rate*100}% discount on {item}.")
+# for item, quantity in inventory.items():
+#     if quantity < min_threshold:
+#         print(f"Reorder {item}.")
+#     elif quantity > discount_threshold:
+#         print(f"Apply a {discount_rate*100}% discount on {item}.")
 
 # Assignments
 # -----------
 # Assignment 1: Write a script that processes a list of temperature readings. If any temperature is above a certain threshold, print a warning.
-temperatures = [22, 35, 28, 31, 40]
 threshold = 30
+temperatures = [25, 28, 32, 29, 35, 27, 31, 26]
 for temp in temperatures:
     if temp > threshold:
-        print(f"Warning: Temperature {temp} exceeds threshold of {threshold} degrees.")
+        print(f"Warning: Temperature {temp} is above the threshold of {threshold}!")
 
 # Assignment 2: Given a list of users with their subscription status, write a loop that sends an email to all subscribed users.
 users = [{"email": "user1@example.com", "subscribed": True},
