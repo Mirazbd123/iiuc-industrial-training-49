@@ -27,7 +27,7 @@ Each section includes detailed explanations, examples, and assignments.
 # import mymodule
 # mymodule.greet("Alice")
 
-print("Module example: See comments for usage.")
+# print("Module example: See comments for usage.")
 
 # Section 2: Packages
 # -------------------
