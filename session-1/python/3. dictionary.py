@@ -68,16 +68,15 @@ student = {'Name' : "Mirazul Alam Arman" , 'Roll' : 'C193002' , 'Grades' : [['Ma
 
 #Adding
 student['Age'] = 20
-# print(student)
+print(student)
 
 #Removing
 del student['Age']
-
-# print(student)
+print(student)
 
 #Modifying
 student['Grades'][0][1] = 'F'
-# print(student)
+print(student)
 
 
 # Section 2: Integrating Dictionaries with Lists and Tuples
@@ -101,6 +100,12 @@ coordinates_info = {(35.6895, 139.6917): "Tokyo", (40.7128, -74.0060): "New York
 
 # Assignment 2: Create a dictionary where keys are student names and values are lists of grades. Calculate the average grade for each student.
 # Write your code below:
+from statistics import mean
+student_dict = {'Miraz' : [60,45,78,98,75,88] , 'Arman' : [67,58,77,90,56,33] , 'Naim' : [77,39,46,79,80,48]}
+print(mean(student_dict['Miraz']))
+print(mean(student_dict['Arman']))
+print(mean(student_dict['Naim']))
+
 
 
 # Congratulations on completing the advanced section on Python dictionaries!
