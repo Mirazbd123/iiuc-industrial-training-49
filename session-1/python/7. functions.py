@@ -19,35 +19,35 @@ Each section includes detailed explanations, examples, and assignments.
 # Functions are defined using the `def` keyword. They allow you to encapsulate code for reuse.
 
 # Example 1: Simple Function
-def greet(name):
-    """Greets a person with their name."""
-    print(f"Hello, {name}!")
+# def greet(name):
+#     """Greets a person with their name."""
+#     print(f"Hello, {name}!")
 
-greet("Alice")
+# greet("Alice")
 
 # Section 2: Parameters and Return Values
 # ---------------------------------------
 # Functions can accept parameters and return values to the caller.
 
 # Example 2: Function with Parameters and Return Value
-def add_numbers(a, b):
-    """Returns the sum of two numbers."""
-    return a + b
+# def add_numbers(a, b):
+#     """Returns the sum of two numbers."""
+#     return a + b
 
-result = add_numbers(5, 3)
+# result = add_numbers(5, 3)
 # print(f"The sum is {result}.")
 
 
 # Functions can return multiple values using tuples.
 # Example 3: Function with Multiple Return Values
-def get_user_data():
-    """Returns multiple pieces of user data."""
-    name = "Alice"
-    age = 30
-    membership = True
-    return name, age, membership
+# def get_user_data():
+#     """Returns multiple pieces of user data."""
+#     name = "Alice"
+#     age = 30
+#     membership = True
+#     return name, age, membership
 
-user_name, user_age, is_member = get_user_data()
+# user_name, user_age, is_member = get_user_data()
 # print(f"Name: {user_name}, Age: {user_age}, Membership: {is_member}")
 
 
@@ -78,14 +78,14 @@ profile = create_profile("Bob", "bob@example.com", "swimming", "art", "calliogra
 # Variables defined inside a function are local to that function. Variables defined outside are global.
 
 # Example 3: Local vs. Global Variables
-x = "global"
+# x = "global"
 
-def test_scope():
-    y = "local"
-    print("Inside function:", y)
+# def test_scope():
+#     y = "local"
+#     print("Inside function:", y)
 
-test_scope()
-print("Outside function:", x)
+# test_scope()
+# print("Outside function:", x)
 
 # Section 4: Advanced Function Concepts
 # -------------------------------------
@@ -112,28 +112,28 @@ print(add(10, 5))
 # Example 5: Lambda Functions
 # Lambda functions are useful for short, simple functions.
 # Lambda functions are small anonymous functions defined with the `lambda` keyword.
-square = lambda x: x * x
-print(f"Square of 5 is {square(5)}.")
+# square = lambda x: x * x
+# print(f"Square of 5 is {square(5)}.")
 
 
 # Proper error handling in functions is crucial for robust applications.
 # Example 6: Error Handling in Functions
-def divide(x, y):
-    try:
-        result = x / y
-    except ZeroDivisionError:
-        print("Error: Cannot divide by zero.")
-    except TypeError:
-        print("Error: Only numbers are allowed.")
-    except Exception as e:
-        print(f"Error: {e}")
-    else:
-        print(f"The result is {result}")
-    finally:
-        print("Executing finally clause.")
+# def divide(x, y):
+#     try:
+#         result = x / y
+#     except ZeroDivisionError:
+#         print("Error: Cannot divide by zero.")
+#     except TypeError:
+#         print("Error: Only numbers are allowed.")
+#     except Exception as e:
+#         print(f"Error: {e}")
+#     else:
+#         print(f"The result is {result}")
+#     finally:
+#         print("Executing finally clause.")
 
-divide(10, 2)
-divide(10, "0")
+# divide(10, 2)
+# divide(10, "0")
 
 # Assignments
 # -----------
@@ -148,6 +148,10 @@ def factorial(n):
         return n * factorial(n - 1)
 
 print("Factorial of 5:", factorial(5))
+try:
+    print(factorial(-1))
+except ValueError as e:
+    print(e)
 
 # Congratulations on completing the advanced section on Python functions!
 # Review the assignments, try to solve them, and check your understanding of function concepts.
