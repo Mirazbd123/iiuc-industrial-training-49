@@ -27,3 +27,6 @@ def create_db_connection():
     except Error as e:
         print(f"The error '{e}' occurred")
         return None
+    
+if __name__ == '__main__':
+    create_db_connection()
