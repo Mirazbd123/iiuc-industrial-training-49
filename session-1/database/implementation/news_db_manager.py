@@ -109,7 +109,7 @@ def create_tables(connection):
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL,
-        phone_number INT UNIQUE ,
+        phone_number VARCHAR(255) UNIQUE ,
         head_office_address VARCHAR(255),
         website VARCHAR(255),
         facbook VARCHAR(255),

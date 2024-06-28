@@ -81,7 +81,7 @@ def insert_category(connection, name, description):
     data = (name, description)
     execute_query(connection, query, data)
 
-def insert_author(connection, name, email):
+def insert_reporter(connection, name, email):
     """
     Inserts a new author into the authors table.
 
@@ -99,13 +99,13 @@ def insert_author(connection, name, email):
     None
     """
     query = """
-    INSERT INTO authors (name, email)
+    INSERT INTO reporter (name, email)
     VALUES (%s, %s)
     """
     data = (name, email)
     execute_query(connection, query, data)
 
-def insert_editor(connection, name, email):
+def insert_publisher(connection, name, email,phone_number , head_office_address,website,facbook,twitter,linkedin,instagram):
     """
     Inserts a new editor into the editors table.
 
@@ -123,10 +123,10 @@ def insert_editor(connection, name, email):
     None
     """
     query = """
-    INSERT INTO editors (name, email)
-    VALUES (%s, %s)
+    INSERT INTO publisher (name, email,phone_number , head_office_address,website,facbook,twitter,linkedin,instagram)
+    VALUES (%s, %s,%s, %s,%s, %s,%s, %s,%s)
     """
-    data = (name, email)
+    data = (name, email,phone_number , head_office_address,website,facbook,twitter,linkedin,instagram)
     execute_query(connection, query, data)
 
 def insert_news(connection, category_id, author_id, editor_id, datetime, title, body, link):
@@ -216,5 +216,7 @@ if __name__ == "__main__":
     conn = create_db_connection()
     if conn is not None:
         insert_category(conn, "Politics", "All news related to politics")
-        insert_author(conn, "John Doe", "test@example.com")
+        insert_reporter(conn, "John Doe", "test@example.com")
+        insert_publisher(conn , "Miraz" , "miraz@gmail.com" , "01701002818","oxygen/pathan para" , "WWW.mirazbd123.com" , "Miraz Alam",
+                         "Mirazbd123" , "Miraz_Alam" , "Mirazul")
         # Add more insert calls for other tables
