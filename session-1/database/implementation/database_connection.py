@@ -25,7 +25,7 @@ def create_db_connection():
         print("MySQL Database connection successful")
         return connection
     except Error as e:
-        print(f"The error '{e}' occurred")
+        print(f"The error '{e}'occurred")
         return None
     
 if __name__ == '__main__':

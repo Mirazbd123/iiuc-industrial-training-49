@@ -50,7 +50,7 @@ def execute_query(connection, query):
         connection.commit()
         print("Query successful")
     except Error as e:
-        print(f"The error '{e}' occurred")
+        print(f"The error '{e}'occurred")
 
 def execute_read_query(connection, query):
     """
@@ -154,12 +154,12 @@ def create_tables(connection):
 if __name__ == "__main__":
     conn = create_db_connection()
     if conn is not None:
-        # create_tables(conn)
-        read_categories_query = "SELECT * FROM categories"
-        news_categories = execute_read_query(conn, read_categories_query)
-        print(news_categories)
+        create_tables(conn)
+        # read_categories_query = "SELECT * FROM categories"
+        # news_categories = execute_read_query(conn, read_categories_query)
+        # print(news_categories)
 
-        read_authors_query = "SELECT * FROM authors"
-        news_authors = execute_read_query(conn, read_authors_query)
-        print(news_authors)
+        # read_authors_query = "SELECT * FROM authors"
+        # news_authors = execute_read_query(conn, read_authors_query)
+        # print(news_authors)
 
