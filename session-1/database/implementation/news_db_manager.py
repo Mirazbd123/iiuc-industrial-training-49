@@ -109,13 +109,13 @@ def create_tables(connection):
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL,
-        phone_number INT UNIQUE NOT NULL,
-        head_office_address VARCHAR(255) NOT NULL,
-        website VARCHAR(255) NOT NULL,
-        facbook VARCHAR(255) NOT NULL,
-        twitter VARCHAR(255) NOT NULL,
-        linkedin VARCHAR(255) NOT NULL,
-        instagram VARCHAR(255) NOT NULL
+        phone_number INT UNIQUE ,
+        head_office_address VARCHAR(255),
+        website VARCHAR(255),
+        facbook VARCHAR(255),
+        twitter VARCHAR(255),
+        linkedin VARCHAR(255),
+        instagram VARCHAR(255)
     );
     """
     create_news_table = """
