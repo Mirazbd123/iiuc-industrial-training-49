@@ -97,18 +97,25 @@ def create_tables(connection):
         description TEXT
     );
     """
-    create_authors_table = """
-    CREATE TABLE IF NOT EXISTS authors (
+    create_reporter_table = """
+    CREATE TABLE IF NOT EXISTS reporter (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL
     );
     """
-    create_editors_table = """
-    CREATE TABLE IF NOT EXISTS editors (
+    create_publisher_table = """
+    CREATE TABLE IF NOT EXISTS publisher (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        email VARCHAR(255) UNIQUE NOT NULL
+        email VARCHAR(255) UNIQUE NOT NULL,
+        phone_number INT UNIQUE NOT NULL,
+        head_office_address VARCHAR(255) NOT NULL,
+        website VARCHAR(255) NOT NULL,
+        facbook VARCHAR(255) NOT NULL,
+        twitter VARCHAR(255) NOT NULL,
+        linkedin VARCHAR(255) NOT NULL,
+        instagram VARCHAR(255) NOT NULL
     );
     """
     create_news_table = """
@@ -122,8 +129,8 @@ def create_tables(connection):
         body TEXT,
         link VARCHAR(255),
         FOREIGN KEY (category_id) REFERENCES categories (id),
-        FOREIGN KEY (author_id) REFERENCES authors (id),
-        FOREIGN KEY (editor_id) REFERENCES editors (id)
+        FOREIGN KEY (author_id) REFERENCES reporter (id),
+        FOREIGN KEY (editor_id) REFERENCES publisher (id)
     );
     """
     create_images_table = """
@@ -143,8 +150,8 @@ def create_tables(connection):
     );
     """
     execute_query(connection, create_categories_table)
-    execute_query(connection, create_authors_table)
-    execute_query(connection, create_editors_table)
+    execute_query(connection, create_reporter_table)
+    execute_query(connection, create_publisher_table)
     execute_query(connection, create_news_table)
     execute_query(connection, create_images_table)
     execute_query(connection, create_summaries_table)
@@ -153,13 +160,16 @@ def create_tables(connection):
 # Example usage
 if __name__ == "__main__":
     conn = create_db_connection()
+    # q = "SET FOREIGN_KEY_CHECKS=0; DROP TABLE editors; SET FOREIGN_KEY_CHECKS=1;"
+    # execute_query(conn, q)
     if conn is not None:
         # create_tables(conn)
-        read_categories_query = "SELECT * FROM categories"
-        news_categories = execute_read_query(conn, read_categories_query)
-        print(news_categories)
 
-        read_authors_query = "SELECT * FROM authors"
-        news_authors = execute_read_query(conn, read_authors_query)
-        print(news_authors)
+        read_show_table_query = "SHOW TABLES"
+        news_table = execute_read_query(conn, read_show_table_query)
+        print(news_table)
+
+        # read_authors_query = "SELECT * FROM authors"
+        # news_authors = execute_read_query(conn, read_authors_query)
+        # print(news_authors)
 
