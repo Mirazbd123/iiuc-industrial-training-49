@@ -154,12 +154,12 @@ def create_tables(connection):
 if __name__ == "__main__":
     conn = create_db_connection()
     if conn is not None:
-        create_tables(conn)
-        # read_categories_query = "SELECT * FROM categories"
-        # news_categories = execute_read_query(conn, read_categories_query)
-        # print(news_categories)
+        # create_tables(conn)
+        read_categories_query = "SELECT * FROM categories"
+        news_categories = execute_read_query(conn, read_categories_query)
+        print(news_categories)
 
-        # read_authors_query = "SELECT * FROM authors"
-        # news_authors = execute_read_query(conn, read_authors_query)
-        # print(news_authors)
+        read_authors_query = "SELECT * FROM authors"
+        news_authors = execute_read_query(conn, read_authors_query)
+        print(news_authors)
 
