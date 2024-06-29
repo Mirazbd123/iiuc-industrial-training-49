@@ -23,7 +23,8 @@ def get_example():
     if response.status_code == 200:
         print("GET request successful!")
         # Print response content
-        print(response.json())
+        dict = response.json()
+        print(dict['title'])
     else:
         print("Failed to retrieve data")
 
@@ -55,7 +56,7 @@ def main():
     print("Executing GET example...")
     get_example()
     print("\nExecuting POST example...")
-    post_example()
+    # post_example()
 
 if __name__ == "__main__":
     main()
@@ -82,79 +83,80 @@ Custom Headers and User Agents: These are used to provide additional information
 Error Handling: The `try-except` blocks are used to catch and handle different types of exceptions that might occur during the request, such as network problems or invalid responses.
 """
 
-import requests
+# import requests
 
-def get_with_headers():
-    """
-    Demonstrates a GET request with custom headers and a user agent.
-    Fetches data from a public API and prints the JSON response.
-    """
-    url = 'https://jsonplaceholder.typicode.com/posts/1'
-    headers = {
-        'User-Agent': 'My User Agent 1.0',
-        'Accept': 'application/json'
-    }
+# def get_with_headers():
+#     """
+#     Demonstrates a GET request with custom headers and a user agent.
+#     Fetches data from a public API and prints the JSON response.
+#     """
+#     url = 'https://jsonplaceholder.typicode.com/posts/1'
+#     headers = {
+#         'User-Agent': 'My User Agent 1.0',
+#         'Accept': 'application/json'
+#     }
     
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raises an HTTPError for bad responses
-        print("GET request with custom headers successful!")
-        print(response.json())
-    except requests.exceptions.HTTPError as errh:
-        print(f"HTTP Error: {errh}")
-    except requests.exceptions.ConnectionError as errc:
-        print(f"Connection Error: {errc}")
-    except requests.exceptions.Timeout as errt:
-        print(f"Timeout Error: {errt}")
-    except requests.exceptions.RequestException as err:
-        print(f"Error: {err}")
+#     try:
+#         response = requests.get(url, headers=headers)
+#         response.raise_for_status()  # Raises an HTTPError for bad responses
+#         print("GET request with custom headers successful!")
+#         print(response.json())
+#     except requests.exceptions.HTTPError as errh:
+#         print(f"HTTP Error: {errh}")
+#     except requests.exceptions.ConnectionError as errc:
+#         print(f"Connection Error: {errc}")
+#     except requests.exceptions.Timeout as errt:
+#         print(f"Timeout Error: {errt}")
+#     except requests.exceptions.RequestException as err:
+#         print(f"Error: {err}")
 
-def post_with_authentication():
-    """
-    Demonstrates a POST request using basic authentication.
-    Sends JSON data to a public API and prints the response.
-    """
-    url = 'https://jsonplaceholder.typicode.com/posts'
-    data = {
-        'title': 'foo',
-        'body': 'bar',
-        'userId': 1
-    }
-    headers = {
-        'User-Agent': 'My User Agent 1.0'
-    }
-    auth = ('user', 'pass')  # Replace with actual username and password
+# def post_with_authentication():
+#     """
+#     Demonstrates a POST request using basic authentication.
+#     Sends JSON data to a public API and prints the response.
+#     """
+#     url = 'https://jsonplaceholder.typicode.com/posts'
+#     data = {
+#         'title': 'foo',
+#         'body': 'bar',
+#         'userId': 1
+#     }
+#     headers = {
+#         'User-Agent': 'My User Agent 1.0'
+#     }
+#     auth = ('user', 'pass')  # Replace with actual username and password
     
-    try:
-        response = requests.post(url, json=data, headers=headers, auth=auth)
-        response.raise_for_status()
-        print("POST request with authentication successful!")
-        print(response.json())
-    except requests.exceptions.HTTPError as errh:
-        print(f"HTTP Error: {errh}")
-    except requests.exceptions.ConnectionError as errc:
-        print(f"Connection Error: {errc}")
-    except requests.exceptions.Timeout as errt:
-        print(f"Timeout Error: {errt}")
-    except requests.exceptions.RequestException as err:
-        print(f"Error: {err}")
+#     try:
+#         response = requests.post(url, json=data, headers=headers, auth=auth)
+#         response.raise_for_status()
+#         print("POST request with authentication successful!")
+#         print(response.json())
+#     except requests.exceptions.HTTPError as errh:
+#         print(f"HTTP Error: {errh}")
+#     except requests.exceptions.ConnectionError as errc:
+#         print(f"Connection Error: {errc}")
+#     except requests.exceptions.Timeout as errt:
+#         print(f"Timeout Error: {errt}")
+#     except requests.exceptions.RequestException as err:
+#         print(f"Error: {err}")
 
-def main():
-    """
-    Main function to execute advanced examples.
-    """
-    print("Executing GET example...")
-    get_example()
-    print("\nExecuting POST example...")
-    post_example()
+# def main():
+#     """
+#     Main function to execute advanced examples.
+#     """
+#     print("Executing GET example...")
+#     get_example()
+#     print("\nExecuting POST example...")
+#     post_example()
 
-    # Advanced usages
-    print("Executing GET request with custom headers...")
-    get_with_headers()
-    print("\nExecuting POST request with authentication...")
-    post_with_authentication()
+#     # Advanced usages
+#     print("Executing GET request with custom headers...")
+#     get_with_headers()
+#     print("\nExecuting POST request with authentication...")
+#     post_with_authentication()
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     #main()
+#     pass
 
 
