@@ -23,6 +23,8 @@ def get_example():
     if response.status_code == 200:
         print("GET request successful!")
         # Print response content
+        # Modify the GET Example: Change the get_example function to fetch a list of posts instead of just one.
+        # Analyze the JSON structure and print out the titles of all posts.
         list_dict = response.json()
         for i in range(0,len(list_dict)):
             print(list_dict[i]['title'])
