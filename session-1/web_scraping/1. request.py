@@ -33,8 +33,10 @@ def get_example():
             list_dict = response.json()
             ans_list = []
             for i in range(0,len(list_dict)):
-                ans_list.append(list_dict[i]['title'])
-            print(ans_list)
+                ans_list.append(f"Post {i+1} :"+list_dict[i]['title'])
+            for i in ans_list:
+                print(i)
+                print("\n")
     except:
         print("Failed to retrieve data")
 
