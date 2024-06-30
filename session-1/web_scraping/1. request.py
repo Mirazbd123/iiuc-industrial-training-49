@@ -16,15 +16,16 @@ def get_example():
     Demonstrates a simple GET request using the `requests` library.
     Fetches data from a public API and prints the JSON response.
     """
-    url = 'https://jsonplaceholder.typicode.com/posts/1'
+    url = 'https://jsonplaceholder.typicode.com/posts/'
     response = requests.get(url)
     
     # Check if the request was successful
     if response.status_code == 200:
         print("GET request successful!")
         # Print response content
-        dict = response.json()
-        print(dict['title'])
+        list_dict = response.json()
+        for i in range(0,len(list_dict)):
+            print(list_dict[i]['title'])
     else:
         print("Failed to retrieve data")
 
@@ -55,7 +56,7 @@ def main():
     """
     print("Executing GET example...")
     get_example()
-    print("\nExecuting POST example...")
+    #print("\nExecuting POST example...")
     # post_example()
 
 if __name__ == "__main__":
