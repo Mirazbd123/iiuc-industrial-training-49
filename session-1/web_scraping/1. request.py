@@ -17,18 +17,25 @@ def get_example():
     Fetches data from a public API and prints the JSON response.
     """
     url = 'https://jsonplaceholder.typicode.com/posts/'
-    response = requests.get(url)
+    headers = {
+         'User-Agent': 'My User Agent 1.0',
+         'Accept': 'application/json' 
+         }
+    response = requests.get(url,headers=headers)
     
-    # Check if the request was successful
-    if response.status_code == 200:
-        print("GET request successful!")
-        # Print response content
-        # Modify the GET Example: Change the get_example function to fetch a list of posts instead of just one.
-        # Analyze the JSON structure and print out the titles of all posts.
-        list_dict = response.json()
-        for i in range(0,len(list_dict)):
-            print(list_dict[i]['title'])
-    else:
+    try:
+        # Check if the request was successful
+        if response.status_code == 200:
+            print("GET request successful!")
+            # Print response content
+            # Modify the GET Example: Change the get_example function to fetch a list of posts instead of just one.
+            # Analyze the JSON structure and print out the titles of all posts.
+            list_dict = response.json()
+            ans_list = []
+            for i in range(0,len(list_dict)):
+                ans_list.append(list_dict[i]['title'])
+            print(ans_list)
+    except:
         print("Failed to retrieve data")
 
 def post_example():
