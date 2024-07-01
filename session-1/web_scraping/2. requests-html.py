@@ -63,10 +63,10 @@ def main():
     Main function to execute the web scraping examples.
     """
     print("Rendering JavaScript on a web page...")
-    render_javascript('https://example.com')
+    render_javascript('https://www.prothomalo.com/politics/ebs6a4ycqz')
 
-    print("\nExtracting information from a web page...")
-    extract_information('https://example.com')
+    # print("\nExtracting information from a web page...")
+    # extract_information('https://example.com')
 
 if __name__ == "__main__":
     main()
